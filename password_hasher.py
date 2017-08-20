@@ -28,11 +28,10 @@ for i in range(len(input_arr)):          #  Appending the user name and hashed p
 
 print(j_output_obj)                        #  Checking manually the gathered information
 
-ans = json.dumps({'users': j_output_obj})  #  Wrapping the produced list
+json_obj = json.dumps({'users': j_output_obj})  #  Wrapping the produced list
 
-print(ans)                                 #  Checking manually the validity of the produced JSON
+print(json_obj)                                 #  Checking manually the validity of the produced JSON
 
-#json.loads(ans)
 with open('users.json', 'w') as users:     #  Writing the product to a JSON document
-    users.write(ans)
+    users.write(json_obj)
 
